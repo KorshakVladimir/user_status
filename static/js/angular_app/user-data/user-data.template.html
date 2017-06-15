@@ -1,0 +1,21 @@
+<div class="login-container">
+    <h3>Hello {{ user.user_name }}, are you on {{ user.status }} </h3>
+
+    <form class="form-inline ">
+        <label>Your current status</label>
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+            <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
+                {{ user.status }}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem" ng-repeat="status in statuses">
+                <p class="status-menuitem user-statuses-filter" ng-click="update_status(status)" >{{ status }}</p>
+            </li>
+
+            </ul>
+        </div>
+    </form>
+    <hr />
+    <users-list></users-list>
+</div>

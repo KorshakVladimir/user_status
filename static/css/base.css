@@ -1,0 +1,29 @@
+.login-form{
+    width: 300px;
+    margin: auto;
+}
+.center-form{
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.login-container{
+    width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+.filter-list-place{
+    height: 60px;
+}
+
+.table-users{
+    border: 1px solid #ccc;
+}
+.user-statuses-filter{
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.form-control{
+    display: inline;
+    width: inherit;
+}

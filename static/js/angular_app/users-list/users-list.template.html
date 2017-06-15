@@ -1,0 +1,17 @@
+<div class="filter-list-place" >
+    <p>List of employees</p>
+    <input ng-model="search.user_name" class="form-control pull-left" placeholder="Search by name...">
+    <label class="pull-right">
+        <span>Filter by status:</span>
+        <select class="form-control " name="repeatSelect"  ng-model="search.status">
+            <option value=""></option>
+            <option ng-repeat="status in statuses" value="{{status}}">{{status}}</option>
+        </select>
+    </label>
+</div>
+<br/>
+<table class="table table-striped table-users">
+  <tr class="user-elem" ng-repeat="user in users | filter:search" >
+      <th>{{ user.user_name }} ({{ user.status }})</th>
+  </tr>
+</table>
